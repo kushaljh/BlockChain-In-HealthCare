@@ -75,7 +75,8 @@ input {
   margin-left: 300px;
 }
 
-.thick-border {
-        border: 3px solid black;
+.centered thick-border {
+        border: 3px white;
         border-collapse: collapse;
+        margin-left: 300px;
 }
