@@ -22,12 +22,12 @@ def index():
 @app.route('/check', methods=['GET', 'POST'])
 def check():
     if request.method == 'GET':
-        return render_template('Output.html')
+        return render_template('Output.html', rslt = 0)
     
     id = request.form['ID']
     deleteScript.deleteRecord(id)
 
-    return render_template('Output.html')
+    return render_template('Output.html', rslt = 1)
 
 if __name__ == '__main__':
     app.run(debug=True)

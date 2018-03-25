@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Patient Drug Prescription</title>
-    <link rel="stylesheet" type="text/css" href="../static/form.css">
+    <link rel="stylesheet" type="text/css" href="form.css">
   </head>
   <body>
     <h1 id="form-title">Drug Prescription</h1>
@@ -10,15 +10,21 @@
     <form id="form-item" method="POST" action="/check">
       <label for="ID">Unique ID:</label>
       <input name="ID" type="text" placeholder="1234567890">
+
       <br>
 
       <br>
-      <button id="submit-button" type="submit">Issue</button>
+      {{ % if rslt == 1 }}
+      <button id="submit-button" class="a" type="submit">Issue</button>
+      {{ % else }}
+      <button id="submit-button" class="a" type="submit">Check</button>
+      {{ % endif }}
     </form>
-    <br>
+      {{ % if rslt == 1 }}
     <form id="form-item" method="GET" action="/check">
       <button id="submit-button" type="cancel">Cancel</button>
     </form>
+    {{ % endif }}
   </div>
   </body>
 </html>
