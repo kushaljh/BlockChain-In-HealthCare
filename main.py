@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request
 import addRecord
+import deleteScript
 
 app = Flask(__name__)
 
@@ -17,6 +18,16 @@ def index():
     addRecord.newUser(name, email, number, drug, dose)
 
     return render_template('gui.html')
+
+@app.route('/check', methods=['GET', 'POST'])
+def check():
+    if request.method == 'GET':
+        return render_template('Output.html')
+    
+    id = request.form['ID']
+    deleteScript.deleteRecord(id)
+
+    return render_template('Output.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
