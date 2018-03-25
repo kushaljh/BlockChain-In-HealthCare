@@ -74,3 +74,8 @@ input {
   float: left;
   margin-left: 300px;
 }
+
+.thick-border {
+        border: 3px solid black;
+        border-collapse: collapse;
+}

@@ -24,12 +24,13 @@ def index():
 @app.route('/check', methods=['GET', 'POST'])
 def check():
     if request.method == 'GET':
-        return render_template('check.html')
+        data_json = {}
+        return render_template('check.html', data_list=data_json)
     
     id = request.form['ID']
     data_json = getRecord.getRecord(id)
 
-    return render_template('check.html', data=data_json)
+    return render_template('check.html', data_list=data_json)
 
 @app.route('/issue', methods=['GET', 'POST'])
 def issue():
