@@ -5,8 +5,10 @@
   -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
 }
-header {
-  <img src="devHacksLogo.png" alt="Mountain View">
+<img src="rod.png" alt="Mountain View" style="width:250px;height:300px;">
+head {
+  position: absolute
+  
 }
 
 html {

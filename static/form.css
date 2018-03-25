@@ -4,28 +4,27 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-kerning: auto;
-
-  background-color: #FFFAF0
-  background-image: url("./backgorund.jpeg");
 }
-header {
-	
+<img src="rod.png" alt="Mountain View" style="width:250px;height:300px;">
+head {
+  position: absolute
+  
 }
-
 
 html {
-  font-family: "Arial"
+  font-family: "Arial";
   -webkit-text-size-adjust: 100%;
 }
 
 
 body {
   margin: 0;
-	height: 100vh;
+	height: 100pt;
+  color: white;
 	background-size:cover;
 	background-position: center;
-  background-color: #FFFAF0
-  background-image: url("./backgorund.jpeg");
+  background-image: url("background.jpeg");
+
 }
 
 #form-title {
@@ -69,4 +68,9 @@ input {
 #submit-button:hover {
   background-color: black; /* Green */
   color: white;
+}
+
+.a {
+  float: left;
+  margin-left: 300px;
 }
