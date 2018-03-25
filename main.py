@@ -27,9 +27,9 @@ def check():
         return render_template('check.html')
     
     id = request.form['ID']
-    #data_json = json.dumps(getRecord.getRecord(id))
+    data_json = getRecord.getRecord(id)
 
-    return render_template('check.html')#, data=data_json)
+    return render_template('check.html', data=data_json)
 
 @app.route('/issue', methods=['GET', 'POST'])
 def issue():

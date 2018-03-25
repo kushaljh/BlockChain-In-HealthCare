@@ -15,7 +15,18 @@
 
       <br>
 
-
+      <table class="centered thick-border">
+          <tr>
+                <th>Field</th>
+                <th>Value</th>
+         </tr>
+         {% for k, v in data.items() %}
+                <tr>
+                        <td>{{ k }}</td>
+                        <td>{{ v }}</td>
+                </tr>
+          {% endfor %}
+      </table>
 
       <button id="submit-button" class="a" type="submit">Check</button>
 
